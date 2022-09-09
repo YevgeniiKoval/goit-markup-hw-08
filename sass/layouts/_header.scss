@@ -1,0 +1,103 @@
+.bonner {
+    border-bottom: 1px solid #ECECEC;
+    &-list {
+        @include flex;
+        margin-left: auto;
+        column-gap: 50px;
+        }
+    & .link {
+        color: $title-text-color;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        }
+    &-icon {
+        fill: currentColor;
+        margin-right: 10px;
+        }
+}
+
+
+.bonner .container,
+.bonner-nav,
+.bonner-nav .list {
+    @include flex;
+}
+
+.logo {
+    color: $accent-color;
+    font-family: $secondary-font, $default-font-raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+&-link {
+    color: #000000;
+    font-family: $secondary-font, $default-font-raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
+        }
+}
+
+
+
+.link.current {
+    color: $accent-color;
+}
+
+.current {
+    color: $accent-color;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: relative;
+}
+
+.link.current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+}
+
+.bonner .gap {
+    column-gap: 50px;
+}
+
+.gap .item .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gap-link:hover,
+.gap-link:focus {
+    color: $accent-color;
+}
+
+.bonner-link {
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    @include flex;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        }
+}
+
+
