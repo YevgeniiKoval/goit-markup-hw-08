@@ -11,9 +11,12 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     border: transparent;
     cursor: pointer;
+    @media screen and (min-width: 1200px) {
+        padding: 10px 32px;
+        }
 
     transition-property: background-color;
     transition-duration: 250ms;

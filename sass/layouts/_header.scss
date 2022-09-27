@@ -18,13 +18,35 @@
         }
 }
 
-
 .bonner .container,
 .bonner-nav,
 .bonner-nav .list {
     @include flex;
 }
 
+.bonner-nav {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+        
+    
+}
+
+.bonner-list {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+     }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
 .logo {
     color: $accent-color;
     font-family: $secondary-font, $default-font-raleway;

@@ -1,11 +1,28 @@
 .blosc {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    
+        }
     &-list {
         display: flex;
-        justify-content: center;
         column-gap: 8px;
-        margin-bottom: 50px;
+        row-gap: 15px;
+        margin-bottom: 40px;
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            max-width: 326px;
+            margin-bottom: 30px;
+            }
+        @media screen and (min-width: 768px) {
+            justify-content: center;
+            margin-bottom: 50px;
+            }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
     
         }
     &-link {
@@ -66,7 +83,13 @@
 }
 
 .aside-item {
-    width: 370px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+        }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+    }
 }
 
 

@@ -2,7 +2,7 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/hero.jpg);
+        url(../images/hero-bgr-mob.jpg);
     background-color: $secondary-bg-color;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,5 +11,18 @@
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 200px 0;
+    padding: 118px 0;
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero-bgr-tab.jpg);
+        }
+    @media screen and (min-width: 1200px) {
+        padding: 200px 0;
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero.jpg);
+    }
 }

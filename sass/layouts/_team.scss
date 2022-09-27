@@ -1,12 +1,24 @@
 .team {
     background-color: $main-bg-color;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+
+    }
     &__item {
-        width: 270px;
+        width: 100%;
         background-color: $white-color;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 30px) / 2);
+        }
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 90px) / 4);
+        }
+
         
     }
     &__subtitle {
@@ -18,12 +30,19 @@
     }
     &__text {
         font-size: 16px;
-        line-height: 1.18;
         margin-bottom: 16px;
+        line-height: 1.18;
     }
     &__list {
         display: flex;
-        column-gap: 30px;
+        flex-direction: column;
+        gap: 30px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 30px;
+            }
     }
     &__container {
         padding-top: 30px;

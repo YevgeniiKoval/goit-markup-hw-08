@@ -1,13 +1,33 @@
 .feature {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    
+        }
     &__list {
-        display: flex;
+        // display: flex;
         gap: 30px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 30px;
+            }
 
     }
     &__item {
-        width: 270px;
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 30px) / 2);
+            }
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        
+        }
 
     }
     &__item-before::before {
@@ -40,6 +60,10 @@
     &__text {
         font-size: 14px;
         line-height: 1.71;
+        @media screen and (min-width: 480px) {
+                margin-bottom: 30px;
+                
+            }
     }
 }
 
