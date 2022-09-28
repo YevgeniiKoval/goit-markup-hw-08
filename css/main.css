@@ -270,10 +270,22 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  color: #212121;
+  line-height: 1.5;
   text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
   margin-bottom: 12px;
+}
+@media screen and (max-width: 400px) {
+  .modal-title {
+    font-size: 16px;
+    line-height: 1.625;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .footer-form-title {
@@ -373,16 +385,29 @@ body {
   color: #2196f3;
   font-family: Raleway, cursive;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
 .logo-link {
   color: #000000;
   font-family: Raleway, cursive;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   margin-right: 93px;
+}
+@media screen and (min-width: 1200px) {
+  .logo-link {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .link.current {
@@ -1064,20 +1089,31 @@ body {
   background-color: #ffffff;
   top: 50%;
   left: 50%;
-  min-height: 581px;
-  min-width: 528px;
+  min-width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
   padding: 40px;
 }
-.modal-icon {
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    min-width: 528px;
+  }
+}
+
+modal-icon {
   display: flex;
   align-items: center;
 }
+
 .backdrop.is-hidden .modal {
   transform: translate(50%, 50%) scale(0);
+}
+
+.modal-form {
+  width: 100%;
 }
 
 .form-input {
@@ -1138,62 +1174,94 @@ body {
   top: 50%;
 }
 
-.user-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 7px;
-  font-size: 14px;
-  line-height: 1.71;
-  cursor: pointer;
+.policy {
+  margin-bottom: 30px;
 }
-
-.user-link {
-  font-size: 14px;
-  line-height: 1.71;
-  color: #2196F3;
+.policy__input {
+  margin-right: 7px;
+}
+.policy__label {
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 440px) {
+  .policy__label {
+    flex-wrap: wrap;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .policy__label {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+}
+.policy__check {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.policy__icon {
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.policy__link {
+  color: #2196f3;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  margin-left: 4px;
   position: relative;
 }
-
-.user-link::after {
+.policy__link::after {
   position: absolute;
-  content: "";
-  bottom: 5px;
+  bottom: 2px;
   right: 0;
+  content: "";
   width: 100%;
   height: 1px;
   background-color: #2196f3;
 }
-
-.user-text span {
-  width: 16px;
-  height: 15px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-property: background-color, border-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width: 1200px) {
+  .policy__link::after {
+    bottom: 5px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .policy__link {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .policy__link {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
-.check-icon {
-  fill: transparent;
-}
-
-.input-check:checked + .user-text span {
+.policy__input:checked + .policy__label .policy__check {
   background-color: #2196f3;
   border-color: #2196f3;
 }
 
-.input-check:checked + .user-text .check-icon {
-  fill: #ffffff;
+.policy__input:focus + .policy__label .policy__check {
+  outline: 1px solid #212121;
 }
 
-.input-check:focus + .user-text span {
-  border-color: #2196f3;
+.policy__input:checked + .policy__label .policy__icon {
+  fill: #ffffff;
 }
 
 .footer-form {
