@@ -38,15 +38,21 @@
 
 .bonner-list {
     display: none;
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-     }
-    @media screen and (min-width: 1200px) {
-        display: flex;
-        flex-direction: row;
-    }
-}
+    
+        @media screen and (min-width: 768px) {
+            display: flex;
+            margin-left: auto;
+            gap: 10px;
+        }
+    
+        @media screen and (max-width: 1199px) {
+            flex-direction: column;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            gap: 30px;
+        }
+    }        
 .logo {
     color: $accent-color;
     font-family: $secondary-font, $default-font-raleway;
@@ -68,9 +74,9 @@
     @media screen and (min-width: 1200px) {
         font-size: 26px;
         line-height: 1.19;
-    
     }
 }
+
 
 
 
@@ -121,6 +127,10 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     @include flex;
+    
+    
+    
+    
 
     transition-property: color;
     transition-duration: 250ms;
