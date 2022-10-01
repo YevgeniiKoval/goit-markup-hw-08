@@ -528,6 +528,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: scroll;
 }
 
 .mob-menu-nav {
@@ -1135,6 +1136,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: visibility 250ms, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: scroll;
 }
 
 .is-hidden {
@@ -1146,12 +1148,12 @@ body {
 .modal {
   position: absolute;
   background-color: #ffffff;
-  top: 50%;
+  top: 20%;
   left: 50%;
   min-width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   transition: transform 250ms linear;
   padding: 40px;
 }
