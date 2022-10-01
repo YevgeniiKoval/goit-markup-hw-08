@@ -1157,6 +1157,13 @@ body {
   transition: transform 250ms linear;
   padding: 40px;
 }
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 95%;
+    max-width: 450px;
+    min-width: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     min-height: 581px;
