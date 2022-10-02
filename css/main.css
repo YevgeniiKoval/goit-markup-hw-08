@@ -269,6 +269,11 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .footer-icon-title {
+    flex-direction: row;
+  }
+}
 
 .modal-title {
   font-weight: 700;
@@ -336,20 +341,20 @@ body {
 }
 .bonner-list {
   display: flex;
-  align-items: center;
   margin-left: auto;
   column-gap: 50px;
 }
-.bonner .link {
+.bonner-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.gap-link .link {
   color: #212121;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.bonner-icon {
-  fill: currentColor;
-  margin-right: 10px;
 }
 
 .bonner .container,
@@ -450,6 +455,11 @@ body {
 }
 
 .gap .item .link {
+  color: #212121;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -640,7 +650,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -663,6 +673,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .primary {
+    height: 600px;
     padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-1x.jpg);
   }
@@ -941,7 +952,9 @@ body {
   }
 }
 .blosc-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -953,6 +966,7 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .blosc-descr {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: none;
@@ -1344,6 +1358,7 @@ modal-icon {
     flex-direction: column;
     align-items: flex-start;
     width: 570px;
+    margin-top: 0px;
   }
 }
 

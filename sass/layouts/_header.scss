@@ -1,21 +1,22 @@
 .bonner {
     border-bottom: 1px solid #ECECEC;
     &-list {
-        @include flex;
+        display: flex;
         margin-left: auto;
         column-gap: 50px;
-        }
-    & .link {
-        color: $title-text-color;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
         }
     &-icon {
         fill: currentColor;
         margin-right: 10px;
         }
+}
+
+.gap-link .link {
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .bonner .container,
@@ -107,6 +108,11 @@
 }
 
 .gap .item .link {
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
