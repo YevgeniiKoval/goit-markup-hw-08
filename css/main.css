@@ -432,13 +432,6 @@ body {
   color: #2196f3;
 }
 
-.current {
-  color: #2196f3;
-  padding-left: 2px;
-  padding-right: 2px;
-  position: relative;
-}
-
 .link.current::after {
   content: "";
   width: 100%;
@@ -454,7 +447,7 @@ body {
   column-gap: 50px;
 }
 
-.gap .item .link {
+.gap-link {
   color: #212121;
   font-weight: 500;
   font-size: 14px;
@@ -471,6 +464,13 @@ body {
 .gap-link:hover,
 .gap-link:focus {
   color: #2196f3;
+}
+
+.current {
+  color: #2196f3;
+  padding-left: 2px;
+  padding-right: 2px;
+  position: relative;
 }
 
 .bonner-link {
@@ -1162,12 +1162,12 @@ body {
 .modal {
   position: absolute;
   background-color: #ffffff;
-  top: 20%;
+  top: 50%;
   left: 50%;
   min-width: 450px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
   padding: 40px;
 }

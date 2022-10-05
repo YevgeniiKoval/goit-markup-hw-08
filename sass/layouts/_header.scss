@@ -85,13 +85,6 @@
     color: $accent-color;
 }
 
-.current {
-    color: $accent-color;
-    padding-left: 2px;
-    padding-right: 2px;
-    position: relative;
-}
-
 .link.current::after {
     content: "";
     width: 100%;
@@ -107,7 +100,7 @@
     column-gap: 50px;
 }
 
-.gap .item .link {
+.gap-link {
     color: $title-text-color;
     font-weight: 500;
     font-size: 14px;
@@ -124,6 +117,13 @@
 .gap-link:hover,
 .gap-link:focus {
     color: $accent-color;
+}
+
+.current {
+    color: $accent-color;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: relative;
 }
 
 .bonner-link {
